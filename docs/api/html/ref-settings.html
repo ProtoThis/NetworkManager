@@ -37,7 +37,7 @@
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="id-1.4.3"></a>Configuration Settings</h2></div></div></div>
 <div class="table">
-<a name="id-1.4.3.2.1"></a><p class="title"><b>Table 81. 802-1x setting</b></p>
+<a name="id-1.4.3.2.1"></a><p class="title"><b>Table 65. 802-1x setting</b></p>
 <div class="table-contents"><table class="table" summary="802-1x setting" border="1">
 <colgroup>
 <col>
@@ -63,6 +63,12 @@
 <td><pre class="screen">string</pre></td>
 <td><pre class="screen"></pre></td>
 <td>Anonymous identity string for EAP authentication methods.  Used as the unencrypted identity with EAP types that support different tunneled identity like EAP-TTLS.</td>
+</tr>
+<tr>
+<td><pre class="screen">auth-timeout</pre></td>
+<td><pre class="screen">int32</pre></td>
+<td><pre class="screen">0</pre></td>
+<td>A timeout for the authentication. Zero means the global default; if the global default is not set, the authentication timeout is 25 seconds.</td>
 </tr>
 <tr>
 <td><pre class="screen">ca-cert</pre></td>
@@ -267,7 +273,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.3.1"></a><p class="title"><b>Table 82. adsl setting</b></p>
+<a name="id-1.4.3.3.1"></a><p class="title"><b>Table 66. adsl setting</b></p>
 <div class="table-contents"><table class="table" summary="adsl setting" border="1">
 <colgroup>
 <col>
@@ -335,7 +341,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.4.1"></a><p class="title"><b>Table 83. bluetooth setting</b></p>
+<a name="id-1.4.3.4.1"></a><p class="title"><b>Table 67. bluetooth setting</b></p>
 <div class="table-contents"><table class="table" summary="bluetooth setting" border="1">
 <colgroup>
 <col>
@@ -373,7 +379,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.5.1"></a><p class="title"><b>Table 84. bond setting</b></p>
+<a name="id-1.4.3.5.1"></a><p class="title"><b>Table 68. bond setting</b></p>
 <div class="table-contents"><table class="table" summary="bond setting" border="1">
 <colgroup>
 <col>
@@ -411,7 +417,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.6.1"></a><p class="title"><b>Table 85. bridge setting</b></p>
+<a name="id-1.4.3.6.1"></a><p class="title"><b>Table 69. bridge setting</b></p>
 <div class="table-contents"><table class="table" summary="bridge setting" border="1">
 <colgroup>
 <col>
@@ -491,7 +497,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.7.1"></a><p class="title"><b>Table 86. bridge-port setting</b></p>
+<a name="id-1.4.3.7.1"></a><p class="title"><b>Table 70. bridge-port setting</b></p>
 <div class="table-contents"><table class="table" summary="bridge-port setting" border="1">
 <colgroup>
 <col>
@@ -535,7 +541,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.8.1"></a><p class="title"><b>Table 87. cdma setting</b></p>
+<a name="id-1.4.3.8.1"></a><p class="title"><b>Table 71. cdma setting</b></p>
 <div class="table-contents"><table class="table" summary="cdma setting" border="1">
 <colgroup>
 <col>
@@ -585,7 +591,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.9.1"></a><p class="title"><b>Table 88. connection setting</b></p>
+<a name="id-1.4.3.9.1"></a><p class="title"><b>Table 72. connection setting</b></p>
 <div class="table-contents"><table class="table" summary="connection setting" border="1">
 <colgroup>
 <col>
@@ -725,7 +731,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.10.1"></a><p class="title"><b>Table 89. dcb setting</b></p>
+<a name="id-1.4.3.10.1"></a><p class="title"><b>Table 73. dcb setting</b></p>
 <div class="table-contents"><table class="table" summary="dcb setting" border="1">
 <colgroup>
 <col>
@@ -841,7 +847,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.11.1"></a><p class="title"><b>Table 90. generic setting</b></p>
+<a name="id-1.4.3.11.1"></a><p class="title"><b>Table 74. generic setting</b></p>
 <div class="table-contents"><table class="table" summary="generic setting" border="1">
 <colgroup>
 <col>
@@ -865,7 +871,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.12.1"></a><p class="title"><b>Table 91. gsm setting</b></p>
+<a name="id-1.4.3.12.1"></a><p class="title"><b>Table 75. gsm setting</b></p>
 <div class="table-contents"><table class="table" summary="gsm setting" border="1">
 <colgroup>
 <col>
@@ -963,7 +969,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.13.1"></a><p class="title"><b>Table 92. infiniband setting</b></p>
+<a name="id-1.4.3.13.1"></a><p class="title"><b>Table 76. infiniband setting</b></p>
 <div class="table-contents"><table class="table" summary="infiniband setting" border="1">
 <colgroup>
 <col>
@@ -1019,7 +1025,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.14.1"></a><p class="title"><b>Table 93. ipv4 setting</b></p>
+<a name="id-1.4.3.14.1"></a><p class="title"><b>Table 77. ipv4 setting</b></p>
 <div class="table-contents"><table class="table" summary="ipv4 setting" border="1">
 <colgroup>
 <col>
@@ -1171,7 +1177,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.15.1"></a><p class="title"><b>Table 94. ipv6 setting</b></p>
+<a name="id-1.4.3.15.1"></a><p class="title"><b>Table 78. ipv6 setting</b></p>
 <div class="table-contents"><table class="table" summary="ipv6 setting" border="1">
 <colgroup>
 <col>
@@ -1329,7 +1335,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.16.1"></a><p class="title"><b>Table 95. ip-tunnel setting</b></p>
+<a name="id-1.4.3.16.1"></a><p class="title"><b>Table 79. ip-tunnel setting</b></p>
 <div class="table-contents"><table class="table" summary="ip-tunnel setting" border="1">
 <colgroup>
 <col>
@@ -1427,7 +1433,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.17.1"></a><p class="title"><b>Table 96. macsec setting</b></p>
+<a name="id-1.4.3.17.1"></a><p class="title"><b>Table 80. macsec setting</b></p>
 <div class="table-contents"><table class="table" summary="macsec setting" border="1">
 <colgroup>
 <col>
@@ -1501,7 +1507,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.18.1"></a><p class="title"><b>Table 97. macvlan setting</b></p>
+<a name="id-1.4.3.18.1"></a><p class="title"><b>Table 81. macvlan setting</b></p>
 <div class="table-contents"><table class="table" summary="macvlan setting" border="1">
 <colgroup>
 <col>
@@ -1551,7 +1557,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.19.1"></a><p class="title"><b>Table 98. 802-11-olpc-mesh setting</b></p>
+<a name="id-1.4.3.19.1"></a><p class="title"><b>Table 82. 802-11-olpc-mesh setting</b></p>
 <div class="table-contents"><table class="table" summary="802-11-olpc-mesh setting" border="1">
 <colgroup>
 <col>
@@ -1595,7 +1601,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.20.1"></a><p class="title"><b>Table 99. ppp setting</b></p>
+<a name="id-1.4.3.20.1"></a><p class="title"><b>Table 83. ppp setting</b></p>
 <div class="table-contents"><table class="table" summary="ppp setting" border="1">
 <colgroup>
 <col>
@@ -1729,7 +1735,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.21.1"></a><p class="title"><b>Table 100. pppoe setting</b></p>
+<a name="id-1.4.3.21.1"></a><p class="title"><b>Table 84. pppoe setting</b></p>
 <div class="table-contents"><table class="table" summary="pppoe setting" border="1">
 <colgroup>
 <col>
@@ -1779,7 +1785,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.22.1"></a><p class="title"><b>Table 101. proxy setting</b></p>
+<a name="id-1.4.3.22.1"></a><p class="title"><b>Table 85. proxy setting</b></p>
 <div class="table-contents"><table class="table" summary="proxy setting" border="1">
 <colgroup>
 <col>
@@ -1829,7 +1835,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.23.1"></a><p class="title"><b>Table 102. serial setting</b></p>
+<a name="id-1.4.3.23.1"></a><p class="title"><b>Table 86. serial setting</b></p>
 <div class="table-contents"><table class="table" summary="serial setting" border="1">
 <colgroup>
 <col>
@@ -1885,7 +1891,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.24.1"></a><p class="title"><b>Table 103. team setting</b></p>
+<a name="id-1.4.3.24.1"></a><p class="title"><b>Table 87. team setting</b></p>
 <div class="table-contents"><table class="table" summary="team setting" border="1">
 <colgroup>
 <col>
@@ -1923,7 +1929,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.25.1"></a><p class="title"><b>Table 104. team-port setting</b></p>
+<a name="id-1.4.3.25.1"></a><p class="title"><b>Table 88. team-port setting</b></p>
 <div class="table-contents"><table class="table" summary="team-port setting" border="1">
 <colgroup>
 <col>
@@ -1955,7 +1961,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.26.1"></a><p class="title"><b>Table 105. tun setting</b></p>
+<a name="id-1.4.3.26.1"></a><p class="title"><b>Table 89. tun setting</b></p>
 <div class="table-contents"><table class="table" summary="tun setting" border="1">
 <colgroup>
 <col>
@@ -2017,7 +2023,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.27.1"></a><p class="title"><b>Table 106. vlan setting</b></p>
+<a name="id-1.4.3.27.1"></a><p class="title"><b>Table 90. vlan setting</b></p>
 <div class="table-contents"><table class="table" summary="vlan setting" border="1">
 <colgroup>
 <col>
@@ -2079,7 +2085,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.28.1"></a><p class="title"><b>Table 107. vpn setting</b></p>
+<a name="id-1.4.3.28.1"></a><p class="title"><b>Table 91. vpn setting</b></p>
 <div class="table-contents"><table class="table" summary="vpn setting" border="1">
 <colgroup>
 <col>
@@ -2141,7 +2147,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.29.1"></a><p class="title"><b>Table 108. vxlan setting</b></p>
+<a name="id-1.4.3.29.1"></a><p class="title"><b>Table 92. vxlan setting</b></p>
 <div class="table-contents"><table class="table" summary="vxlan setting" border="1">
 <colgroup>
 <col>
@@ -2263,7 +2269,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.30.1"></a><p class="title"><b>Table 109. wimax setting</b></p>
+<a name="id-1.4.3.30.1"></a><p class="title"><b>Table 93. wimax setting</b></p>
 <div class="table-contents"><table class="table" summary="wimax setting" border="1">
 <colgroup>
 <col>
@@ -2301,7 +2307,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.31.1"></a><p class="title"><b>Table 110. 802-3-ethernet setting</b></p>
+<a name="id-1.4.3.31.1"></a><p class="title"><b>Table 94. 802-3-ethernet setting</b></p>
 <div class="table-contents"><table class="table" summary="802-3-ethernet setting" border="1">
 <colgroup>
 <col>
@@ -2417,7 +2423,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.32.1"></a><p class="title"><b>Table 111. 802-11-wireless setting</b></p>
+<a name="id-1.4.3.32.1"></a><p class="title"><b>Table 95. 802-11-wireless setting</b></p>
 <div class="table-contents"><table class="table" summary="802-11-wireless setting" border="1">
 <colgroup>
 <col>
@@ -2551,7 +2557,7 @@
 </div>
 <p><br class="table-break"></p>
 <div class="table">
-<a name="id-1.4.3.33.1"></a><p class="title"><b>Table 112. 802-11-wireless-security setting</b></p>
+<a name="id-1.4.3.33.1"></a><p class="title"><b>Table 96. 802-11-wireless-security setting</b></p>
 <div class="table-contents"><table class="table" summary="802-11-wireless-security setting" border="1">
 <colgroup>
 <col>

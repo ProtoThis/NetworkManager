@@ -771,7 +771,13 @@ supplicant_interface_init (NMDeviceEthernet *self)
 	                                                    self);
 
 	/* Set up a timeout on the connection attempt to fail it after 25 seconds */
-	priv->supplicant.con_timeout_id = g_timeout_add_seconds (25, supplicant_connection_timeout_cb, self);
+	// OVERRIDE: priv->supplicant.con_timeout_id = g_timeout_add_seconds (25, supplicant_connection_timeout_cb, self);
+	/* Set up a timeout on the connection attempt */
+	guint timeout;
+	timeout = nm_device_get_supplicant_timeout (NM_DEVICE (self));
+	priv->supplicant.con_timeout_id = g_timeout_add_seconds (timeout,
+								 supplicant_connection_timeout_cb,
+								 self);
 
 	return TRUE;
 }

@@ -3139,6 +3139,9 @@ fill_8021x (shvarFile *ifcfg,
 	g_object_set (s_8021x, NM_SETTING_802_1X_PHASE2_DOMAIN_SUFFIX_MATCH, value, NULL);
 	g_free (value);
 
+	timeout = svGetValueInt64 (ifcfg, "IEEE_8021X_AUTH_TIMEOUT", 10, 0, G_MAXINT32, 0);
+	g_object_set (s_8021x, NM_SETTING_802_1X_AUTH_TIMEOUT, (gint32) timeout, NULL);
+
 	if (list)
 		g_strfreev (list);
 	if (keys)

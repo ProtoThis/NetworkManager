@@ -56,6 +56,7 @@ NmcPropertyDesc setting_802_11_wireless_security[] = {
 NmcPropertyDesc setting_802_1x[] = {
 	{ "altsubject-matches", "List of strings to be matched against the altSubjectName of the certificate presented by the authentication server. If the list is empty, no verification of the server certificate's altSubjectName is performed." },
 	{ "anonymous-identity", "Anonymous identity string for EAP authentication methods.  Used as the unencrypted identity with EAP types that support different tunneled identity like EAP-TTLS." },
+	{ "auth-timeout", "A timeout for the authentication. Zero means the global default; if the global default is not set, the authentication timeout is 25 seconds." },
 	{ "ca-cert", "Contains the CA certificate if used by the EAP method specified in the \"eap\" property. Certificate data is specified using a \"scheme\"; two are currently supported: blob and path. When using the blob scheme (which is backwards compatible with NM 0.7.x) this property should be set to the certificate's DER encoded data. When using the path scheme, this property should be set to the full UTF-8 encoded path of the certificate, prefixed with the string \"file://\" and ending with a terminating NUL byte. This property can be unset even if the EAP method supports CA certificates, but this allows man-in-the-middle attacks and is NOT recommended." },
 	{ "ca-path", "UTF-8 encoded path to a directory containing PEM or DER formatted certificates to be added to the verification chain in addition to the certificate specified in the \"ca-cert\" property." },
 	{ "client-cert", "Contains the client certificate if used by the EAP method specified in the \"eap\" property. Certificate data is specified using a \"scheme\"; two are currently supported: blob and path. When using the blob scheme (which is backwards compatible with NM 0.7.x) this property should be set to the certificate's DER encoded data. When using the path scheme, this property should be set to the full UTF-8 encoded path of the certificate, prefixed with the string \"file://\" and ending with a terminating NUL byte." },
@@ -436,7 +437,7 @@ NmcSettingDesc all_settings[] = {
 	{ "802-11-olpc-mesh", setting_802_11_olpc_mesh, 4 },
 	{ "802-11-wireless", setting_802_11_wireless, 17 },
 	{ "802-11-wireless-security", setting_802_11_wireless_security, 18 },
-	{ "802-1x", setting_802_1x, 35 },
+	{ "802-1x", setting_802_1x, 36 },
 	{ "802-3-ethernet", setting_802_3_ethernet, 15 },
 	{ "adsl", setting_adsl, 8 },
 	{ "bluetooth", setting_bluetooth, 3 },

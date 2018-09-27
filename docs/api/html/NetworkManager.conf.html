@@ -286,7 +286,7 @@ no-auto-default=*
         <code class="filename">resolv.conf</code> to point to the local
         nameserver. It is possible to pass custom options to the
         dnsmasq instance by adding them to files in the
-        "<code class="filename">${prefix}/etc/NetworkManager/dnsmasq.d/</code>"
+        "<code class="filename">/etc/NetworkManager/dnsmasq.d/</code>"
         directory. Note that when multiple upstream servers are
         available, dnsmasq will initially contact them in parallel and
         then use the fastest to respond, probing again other servers
@@ -310,7 +310,7 @@ no-auto-default=*
 <p>Set the <code class="filename">resolv.conf</code>
         management mode. The default value depends on NetworkManager build
         options, and this version of NetworkManager was build with a default of
-        "<code class="literal">symlink</code>".
+        "<code class="literal">resolvconf</code>".
         Regardless of this setting, NetworkManager will
         always write resolv.conf to its runtime state directory.</p>
 <p><code class="literal">symlink</code>: NetworkManager will symlink
@@ -393,7 +393,7 @@ no-auto-default=*
 <tr>
 <td><p><span class="term"><code class="varname">path</code></span></p></td>
 <td><p>The location where keyfiles are read and stored.
-            This defaults to "<code class="filename">${prefix}/etc/NetworkManager/conf.d</code>".
+            This defaults to "<code class="filename">/etc/NetworkManager/conf.d</code>".
             </p></td>
 </tr>
 <tr>

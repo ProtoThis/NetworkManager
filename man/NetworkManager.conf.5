@@ -2,7 +2,7 @@
 .\"     Title: NetworkManager.conf
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
-.\"      Date: 02/15/2017
+.\"      Date: 09/26/2018
 .\"    Manual: Configuration
 .\"    Source: NetworkManager 1.6.2
 .\"  Language: English
@@ -225,7 +225,7 @@ to reflect the nameservers provided by currently active connections\&.
 .sp
 dnsmasq: NetworkManager will run dnsmasq as a local caching nameserver, using a "split DNS" configuration if you are connected to a VPN, and then update
 resolv\&.conf
-to point to the local nameserver\&. It is possible to pass custom options to the dnsmasq instance by adding them to files in the "${prefix}/etc/NetworkManager/dnsmasq\&.d/" directory\&. Note that when multiple upstream servers are available, dnsmasq will initially contact them in parallel and then use the fastest to respond, probing again other servers after some time\&. This behavior can be modified passing the \*(Aqall\-servers\*(Aq or \*(Aqstrict\-order\*(Aq options to dnsmasq (see the manual page for more details)\&.
+to point to the local nameserver\&. It is possible to pass custom options to the dnsmasq instance by adding them to files in the "/etc/NetworkManager/dnsmasq\&.d/" directory\&. Note that when multiple upstream servers are available, dnsmasq will initially contact them in parallel and then use the fastest to respond, probing again other servers after some time\&. This behavior can be modified passing the \*(Aqall\-servers\*(Aq or \*(Aqstrict\-order\*(Aq options to dnsmasq (see the manual page for more details)\&.
 .sp
 unbound: NetworkManager will talk to unbound and dnssec\-triggerd, providing a "split DNS" configuration with DNSSEC support\&.
 /etc/resolv\&.conf
@@ -241,7 +241,7 @@ rc\-manager\ \&unmanaged
 .RS 4
 Set the
 resolv\&.conf
-management mode\&. The default value depends on NetworkManager build options, and this version of NetworkManager was build with a default of "symlink"\&. Regardless of this setting, NetworkManager will always write resolv\&.conf to its runtime state directory\&.
+management mode\&. The default value depends on NetworkManager build options, and this version of NetworkManager was build with a default of "resolvconf"\&. Regardless of this setting, NetworkManager will always write resolv\&.conf to its runtime state directory\&.
 .sp
 symlink: NetworkManager will symlink
 /etc/resolv\&.conf
@@ -296,7 +296,7 @@ or other system configuration files according to build options\&.
 .PP
 \fIpath\fR
 .RS 4
-The location where keyfiles are read and stored\&. This defaults to "${prefix}/etc/NetworkManager/conf\&.d"\&.
+The location where keyfiles are read and stored\&. This defaults to "/etc/NetworkManager/conf\&.d"\&.
 .RE
 .PP
 \fIunmanaged\-devices\fR

@@ -8,7 +8,6 @@
       <sub name="NetworkManager.conf" link="NetworkManager.conf.html"/>
       <sub name="nm-settings" link="nm-settings.html"/>
       <sub name="nm-settings-keyfile" link="nm-settings-keyfile.html"/>
-      <sub name="nm-settings-ifcfg-rh" link="nm-settings-ifcfg-rh.html"/>
       <sub name="nmcli-examples" link="nmcli-examples.html"/>
       <sub name="NetworkManager" link="NetworkManager.html"/>
     </sub>

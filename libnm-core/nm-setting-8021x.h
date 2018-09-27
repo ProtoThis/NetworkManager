@@ -119,6 +119,7 @@ typedef enum { /*< underscore_name=nm_setting_802_1x_ck_scheme >*/
 #define NM_SETTING_802_1X_PIN "pin"
 #define NM_SETTING_802_1X_PIN_FLAGS "pin-flags"
 #define NM_SETTING_802_1X_SYSTEM_CA_CERTS "system-ca-certs"
+#define NM_SETTING_802_1X_AUTH_TIMEOUT "auth-timeout"
 
 /* PRIVATE KEY NOTE: when setting PKCS#12 private keys directly via properties
  * using the "blob" scheme, the data must be passed in PKCS#12 binary format.
@@ -302,6 +303,7 @@ NMSettingSecretFlags   nm_setting_802_1x_get_phase2_private_key_password_flags (
 
 NMSetting8021xCKFormat nm_setting_802_1x_get_phase2_private_key_format   (NMSetting8021x *setting);
 
+gint                   nm_setting_802_1x_get_auth_timeout                (NMSetting8021x *setting);
 
 G_END_DECLS
 
